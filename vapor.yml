@@ -1,22 +1,21 @@
-id: 1425
-name: laravel-vapor-example
+id: 4037
+name: l-v-e
 environments:
     production:
         memory: 1024
         cli-memory: 512
         build:
-            - 'composer install --no-dev --classmap-authoritative'
+            - 'composer install --no-dev'
             - 'php artisan event:cache'
-            - 'npm install && npm run prod && rm -rf node_modules'
+            - 'npm ci && npm run prod && rm -rf node_modules'
     staging:
         memory: 1024
         cli-memory: 512
-        domain: andredemos.ca
-        storage: drehimself
-        database: my-test-database
+        storage: laravel-vapor-example
         build:
-            - 'composer install --classmap-authoritative'
+            - 'composer install'
             - 'php artisan event:cache'
-            - 'npm install && npm run dev && rm -rf node_modules'
-        deploy:
-            - 'php artisan migrate --force'
+            - 'npm ci && npm run dev && rm -rf node_modules'
+    test1:
+        build:
+            - 'composer install --no-dev'
