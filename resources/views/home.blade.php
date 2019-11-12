@@ -17,6 +17,7 @@
                     You are logged in!
                     <file-upload></file-upload>
                 </div>
+                <h1>Hi There</h1>
             </div>
         </div>
     </div>

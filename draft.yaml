@@ -1,0 +1,5 @@
+models:
+  Messages:
+    user: int
+    body: longtext
+    type: string:64

@@ -41,12 +41,8 @@ Route::get('/jobs/{jobs}', function ($jobs) {
     return 'Jobs complete!';
 });
 
-Route::post('/submit', function (Request $request) {
-    Storage::copy(
-        $request->input('key'),
-        str_replace('tmp/', '', $request->input('key'))
-    );
-});
+Route::post('/submit', 'TestController@storeImage');
+
 
 Auth::routes();
 
