@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Messages;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $mess = Messages::all()->last();
+        $media = $mess->getMedia('message-images');
+        $i = $media[0];
+        $u = $i->getFullUrl();
+        return view('home', ['url' => $u]);
     }
 }

@@ -30,8 +30,8 @@ class imageStore extends TestCase
     {
         // Given
         $post_values = [
-            'uuid' => 'a60fd35d-c67c-4bdf-985e-05aeb75521a2',
-            'key' => 'tmp/a60fd35d-c67c-4bdf-985e-05aeb75521a2',
+            'uuid' => '150cb461-4d6e-43be-b0b9-13b2ea9d81a0',
+            'key' => 'tmp/150cb461-4d6e-43be-b0b9-13b2ea9d81a0',
             'bucket' => 'laravel-vapor-example',
             'name' => 'AutomaticMergePossible-2013-08-22_22-13-09.png',
             'content_type' => 'image/png',

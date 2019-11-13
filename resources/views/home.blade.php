@@ -18,6 +18,7 @@
                     <file-upload></file-upload>
                 </div>
                 <h1>Hi There</h1>
+                <img src="{{ $url }}" alt="" width="500">
             </div>
         </div>
     </div>

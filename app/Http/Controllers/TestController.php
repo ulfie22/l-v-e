@@ -37,6 +37,7 @@ class TestController extends Controller
         $mess->addMediaFromUrl($url)
             ->toMediaCollection('message-images');
         $mess->save();
+        Log::info($mess);
 
         $path = Storage::disk('s3')->put('messages/'. $path_to_file, 'public');
         dump($path);
